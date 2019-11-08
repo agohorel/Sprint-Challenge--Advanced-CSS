@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+*Adaptive design is the idea of building multiple layouts targeted toward different devices or screen sizes and applying the corresponding layout at runtime, while responsive design focuses on building a single, flexible layout that can scale to fit any device or screen size.*
+
 2. Describe what it means to be mobile first vs desktop first.
+
+*A desktop-first approach refers to designing an interface with everything as intended for the "full fat" experience on desktop and then trimming things down as the screen size shrinks. In terms of media queries, desktop-first utilizes `max-width`. A mobile-first approach utilizes the concept of "progressive enhancement" to modify the layout as the screen size increases. Mobile-first utilizes `min-width` media queries. The net result is often the same between the two approaches, it's mostly a difference in how you think about and approach building layouts.*
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+*Setting the `font-size` to `62.5%` in the `html` tag is done set the global font size to 10px so it's easier to work with rems. The "magic number" `62.5%` is based on the assumption that most browsers set the default `font-size` to `16px` (`16px * 62.5% = 10px`).*
+
 4. How would you describe preprocessing to someone new to CSS?
 
+*A CSS preprocessor allows you to write CSS in a modified syntax that allows for easier development and more complex features while ultimately compiling down to regular CSS that can be universally understood by browsers.*
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+*My favorite concept of preprocessing is tied between nesting and parametric mixins. Parametric mixins can make classes much more powerful and configurable, but nesting makes the code much more readable and more closely structured with the underlying HTML's own nesting. The downside to nesting is that in some cases it can actually make it harder to mentally keep track of selectors, so I'd say that's the most challenging aspect.*
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
