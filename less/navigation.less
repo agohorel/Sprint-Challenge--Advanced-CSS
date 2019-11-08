@@ -1,1 +1,21 @@
-// Navigation code here
+.nav {
+  .flex(column, center, center);
+  padding: 1rem 0 1rem 0;
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-links {
+    .flex(row, space-between, center);
+    width: 50%;
+
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: @nav-font;
+      font-weight: bold;
+    }
+  }
+}
