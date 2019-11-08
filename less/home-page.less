@@ -1,9 +1,5 @@
-// Home Content
-
 .home {
-
   .intro {
-
     img {
       border-radius: @border-radius;
     }
@@ -13,9 +9,8 @@
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
@@ -50,6 +45,10 @@
     display: flex;
     justify-content: center;
 
+    .hide-desktop {
+      display: none;
+    }
+
     .walk-text {
       width: 50%;
 
@@ -69,7 +68,7 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
@@ -77,4 +76,52 @@
       }
     }
   }
-}// home
+  @media @phone {
+    .intro {
+      img {
+        height: 130px;
+        width: 100%;
+      }
+    }
+
+    .space-images {
+      .flex(row, center, center);
+
+      img:not(:first-child) {
+        display: none;
+      }
+
+      img:first-child {
+        width: 90%;
+      }
+    }
+
+    .walk {
+      .flex(column, center, center);
+      padding: 15px;
+      width: 100%;
+      margin-top: 20px;
+
+      .hide-desktop {
+        display: inline-block;
+        width: 100%;
+        margin: 5px 0 20px 0;
+      }
+
+      .hide-mobile {
+        display: none;
+      }
+
+      .walk-text {
+        width: 100%;
+
+        .btn {
+          width: 100%;
+          text-align: center;
+          padding: 25px 0;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+} // home
