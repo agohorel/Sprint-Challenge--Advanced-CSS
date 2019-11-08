@@ -14,12 +14,28 @@
   padding: 10px 20px;
 
   &:hover {
-      background-color: lighten(@color-bg, 30%);
-      color: darken(@color-font, 100%);
-      cursor: pointer;
+    background-color: lighten(@color-bg, 30%);
+    color: darken(@color-font, 100%);
+    cursor: pointer;
   }
 }
 
 .shadow(@h-offset, @v-offset, @blur) {
   box-shadow: @h-offset @v-offset @blur rgba(0, 0, 0, 0.2);
+}
+
+.slideInFromTop(@duration) {
+  animation: slideInFromTop @duration ease-out forwards;
+
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-@nav-height);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
