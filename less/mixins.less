@@ -1,1 +1,41 @@
-// Mixins Here
+.flex(@direction, @justify, @align) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.button(@color-bg, @color-font, @size-font, @border-radius) {
+  background-color: @color-bg;
+  color: @color-font;
+  font-size: @size-font;
+  border-radius: @border-radius;
+  display: inline-block;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: lighten(@color-bg, 30%);
+    color: darken(@color-font, 100%);
+    cursor: pointer;
+  }
+}
+
+.shadow(@h-offset, @v-offset, @blur) {
+  box-shadow: @h-offset @v-offset @blur rgba(0, 0, 0, 0.2);
+}
+
+.slideInFromTop(@duration) {
+  animation: slideInFromTop @duration ease-out forwards;
+
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-@nav-height);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
